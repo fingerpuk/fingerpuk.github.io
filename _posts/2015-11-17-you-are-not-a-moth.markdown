@@ -8,13 +8,13 @@ description: Technology Design
 
 I feel it is time to discuss something that’s been on my mind for a while. I’m uncomfortable with your addiction to the lightbulb.
 
-I don’t think it’s doing you any good. In fact I think it’s going to kill you. I think your going to keep bouncing into it, looking for inspiration or an answer, until that important moth wing dust burns away and you fall to the floor like an old and dead Pigeon.
+I don’t think it’s doing you any good. In fact I think it’s going to kill you. I think your going to keep bouncing into it, looking for inspiration or an answer, until that important moth dust burns away and you fall to the floor like an old and dead Pigeon.
 
 You don’t need it.
 
 It’s never going to give you the answers. It’s just a light. And when it burns out it’ll be replaced by an identical one, maybe one with diodes instead of a filament, but it’s still just a bulb.
 
-We’ve been here before. Last time it was that disco ball hanging  in that discarded van that all the other Moths were glued to. You bounced your head into that for weeks believing it would turn you into a butterfly. All you got was a broken antennae.
+We’ve been here before. Last time it was that disco ball hanging in that discarded van that all the other moths were glued to. You bounced your head into that for weeks believing it would turn you into a butterfly. All you got was a broken antennae.
 
 And then there was that gas boiler pilot light. You were convinced flames were back in vogue. “It’s retro chic” you said.  How long did that last?
 
@@ -24,11 +24,11 @@ This reminds me of Microsoft, they used to be addicted to their photocopier. It 
 
 Moths are no different.
 
-They hunt around for the next in an endless line of lights to bump up against, hoping that somehow the insight the designer they’re trying to steal from had will be injected into them through some mystical method. It won’t.
+They hunt around for the next in an endless line of lights to bump up against, hoping that somehow the insight the designer they’re trying to steal from had will be injected into them by some mystical method. It won’t.
 
-But even if it did, it doesn’t matter. The facsimile was created on Microsoft’s copier. It’s broken. The Moths will never understand it. The design challenge they are facing is nothing like the design challenge these other people were facing. So why should their idea save their arse now? It won’t.
+But even if it did, it doesn’t matter. The facsimile was created on Microsoft’s copier. It’s broken. The moths will never understand it. The design challenge they are facing is nothing like the design challenge these other people were facing. So why should that stolen idea save their arse now? It won’t.
 
-Design Moths are the worst of all things. An uninformed consumer.
+Design moths are the worst of all things. Lazy.
 
 Don’t do it.
 
@@ -95,7 +95,3 @@ That is where you belong, amongst a team. Asking questions, finding answers, and
 You don’t need the bulb.
 
 You are not a moth.
-
-—
-
-If you want to work in a place where Designers don’t have antennae, we’re hiring. recruitment@readingroom.com
