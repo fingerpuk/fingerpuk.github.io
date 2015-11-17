@@ -6,7 +6,7 @@ description: Technology Design
 
 # Digital archives, a vision.
 
-I was recently asked to write a vision piece on the future of archives. Yes, Creative Directors can know about technology too. We're not just good at colour and type. Some of us aren't at all good at colour and type. Anyway, this is the vision I came up with. It pissed off the archivists. I see this as a job well done.
+I was recently asked to write a vision piece on the future of archives, which is a fascinating, tough, complex, wonderful mess of a problem. And yes, Creative Directors are allowed to know about technology. We're not just good at colour and type. Some of us aren't at all good at colour and type. Anyway, this is the vision I came up with. It pissed off the archivists. I see this as a job well done.
 
 
 **Introduction**.
@@ -74,9 +74,9 @@ Whilst this approach will be unlikely to provide all the answers it provides a g
 
 Archives must be built adapt. To cope with the technical, social, legal, and economic changes that will happen during it’s lifetime.
 
-Ownership of digital materials is a controversial and much debated subject. National and international laws have been, and continue to be, created in an attempt to protect access rights, and so technologies have to be invented to support these laws. The subject of whether DRM encryption should be included in an archived audio file is very interesting, but out of scope of this document. However a digital archive needs to be able to adapt to changes in law, encryption, and rights holder’s wishes.
+Ownership of digital materials is a controversial and much debated subject. National and international laws have been, and continue to be, created in an attempt to protect access rights, and so technologies have to be invented to support these laws. The subject of whether DRM encryption should be included in an archived audio file is very interesting, but out of scope of this essay. However a digital archive needs to be able to adapt to changes in law, encryption, and rights holder’s wishes.
 
-<next page/>
+**Layered and flexible**
 
 Build in layers and modules, not in one large lump.
 
@@ -84,54 +84,47 @@ If you build an archive today, some part of that archive will need to be replace
 
 Building in modules allows you to add capability over time, to focus on each capability as you build it, and to scale your infrastructure gradually. Each part can be built on the most appropriate technology, by the best technology provider for that part. And as new technologies are created they can be incorporated into the system as a new module, rather than re-architecting everything.
 
-<next page/>
-
 Define a schema for your modules from the outset.
 
 Modular systems can grow in complexity very quickly, and so it is essential to define the sets of schemas and protocols that will pass data between them before any development begins in earnest. Decide upon and document the relationships between, the capabilities of, and the dependencies of each module.
 
 As it is likely that any new archiving platform will be adopted by a wide variety of organisations and institutions, who will each have specific and possibly complex requirements, the base set of capabilities and dependencies should be kept as simple as possible.
 
-<new page/>
-
 Build your system to be technology agnostic. It should be capable of running on any hardware, on any operating system. The more open you make it, the less chance of failure you have and the wider the adoption will be.
 
-<new page/>
-
 Accept that your new system will never be finished. Legal, social, and technological changes will require any new system to be capable of fast and sometimes radical change. The more open you build it, the more capable of change it is, the less likely it is to require a rebuild and migration in the near future.
-
-<new page/>
 
 Build in layers.
 
 Modules allow the distinct capabilities of the system to live alone, with no dependencies upon each other. Layers allow the broader requirements of the system to be separated, creating a more flexible and easily modified stack.
 
-Our assumption is that the four main layers of a digital archive are the repositories, a secure access layer, the catalogues, and the end user access layer.
+The assumption is that the four main layers of a digital archive are the repositories, a secure access layer, the catalogues, and the end user access layer.
 
 **Repositories**.
+
 The repositories are where you keep your stuff. They can be built in any type of database technology. They can be big or small. They can store anything, or specialise in specific formats. And they can be owned by you or third parties. They can be encrypted, or not, and can make use of any available additional security.
 
 The open and flexible nature of the repository types described here is a requirement of any digital archive which is built to adapt to the future. We don’t know what’s coming, what will be deprecated, and what new technologies we’ll have to work with. And so we must design for a repository layer which is incredibly diverse.
 
-Repositories are not linked directly, and do not know of each other’s existence. If one is removed nothing breaks, if another is added the same zero impact outcome is achieved. Repositories can be backed up entirely, or in chunks. Back ups can be static, dynamic, or even other repositories.
+Repositories are not linked directly, and do not know of each other’s existence. If one is removed nothing breaks, if another is added the same zero impact outcome is achieved. Repositories can be backed up entirely, or in chunks. Backups can be static, dynamic, or even other repositories.
 
-Some repositories will be owned and maintained by The National Archives, others by local government bodies, and yet others by public institutions. However with the model we would test repositories that contribute to the archive can be owned by anyone.
+Some repositories will be owned and maintained by a specific organisation, others by local government bodies, and yet others by public institutions. However with the model I would test, repositories that contribute to the archive can be owned by anyone.
 
 Each repository however will need to, either directly or via associated data, store a unique identifier with each discreet piece of data. Other than this no additional data need be stored, such as meta data, in the repository itself.
 
-And finally the repository should be the least capable layer of the system, as it is the most likely layer to be attacked. Securing systems gets you only so far, but remove the ability for a system to destroy itself and an attack can only go so far.
+And finally the repository should be the least capable layer of the system, as it is the most likely layer to be attacked. Securing systems gets you only so far, but remove the ability for a system to destroy itself and an attack can only do so much damage.
 
 **Secure Access Layer**
 
-The Secure Access Layer, or SAL, provides a translation and brokerage service between the collections and the repositories. It is this layer that requests for repository access are made and managed through.
+The Secure Access Layer provides a translation and brokerage service between the collections and the repositories. It is this layer that requests for repository access are made and managed through.
 
-The SAL works by taking a requests, checking the authenticity of the request, and if that authenticity is correct returning the requested data to or from the repository. It also acts to translate the returned data from bits to a human readable format - audio files, image files, plain text etc. Where the returned result is a richer data set, say an executable file that requires virtualisation, the SAL will return the required stack as a package.
+The SAL works by taking a request, checking the authenticity of that request, and if the authenticity is correct returning the requested data to or from the repository. It also acts to translate the returned data from bits to a human readable format - audio files, image files, plain text etc. Where the returned result is a richer data set, say an executable file that requires virtualisation, the SAL will return the required stack as a package.
 
 The SAL works as a barrier to unauthorised access to secured data. An example would be data which is archived but not available for public release for N years.
 
 The SAL is the most capable layer in the stack.
 
-**The Collections**.
+**The Collections**
 
 A collection is simply a set of addresses for data within a repository, and the associated metadata, grouped by theme, subject, or other grouping. It is concerned not with data storage, but with information about the digital objects (be they photos, emails, movies, virtual machines, etc). The collection keeps metadata which describes these objects (what, who, when, where, why) and is the layer where access rights are governed - what can be accessed by whom, how it can be accessed, and for what purpose.
 
@@ -143,20 +136,19 @@ The collection is where pre-ingest archival information packages and disseminati
 
 *Judgement can happen at the individual level (the archivist responsible) or at the group level (through cluster analysis of the ontological links). It is therefore possible, and sensible, that collections can be automatically created and machine curated.
 
-**Permissions and content governance is beyond the scope of this document, but we have spent many an evening having heated discussions about it with multiple digital archivists.
+**Permissions and content governance is beyond the scope of this document, but I've spent many an evening having heated discussions about it with digital archivists.
 
-**End User Access Layer**.
-The End User Access Layer, or EUAL, is where people access content. These can be secured websites, mobile apps, social media, broadcast radio or television, galleries. Anywhere, using any method, can be considered an EUAL.
+**End User Access Layer**
+
+The End User Access Layer is where people access content. These can be secured websites, mobile apps, social media, broadcast radio or television, or galleries. Anywhere, using any method, can be considered an EUAL.
 
 The EUAL is authorised to access data from the collection, the collection is authorised access via the SAL.
 
-<new page/>
-
-Linked data and ontologies.
+**Linked data and ontologies**
 
 There is one potential additional layer which provides an overarching ontological understanding of the data held in every repository.
 
-This layer, which sits above the SAL, uses the meta data from each collection along to build a dynamic taxonomy of terms used across the entire archive. These terms are not defined by any individual or predetermined group, but by every user of every collection who has the ability to enter meta data.
+This layer, which sits above the SAL, uses the meta data from each collection to build a dynamic taxonomy of terms used across the entire archive. These terms are not defined by any individual or predetermined group, but by every user of every collection who has the ability to enter meta data.
 
 This layer would also collect the usage analytics from collections, and perform cluster analysis, to determine what end users believe are the most important and relevant relationships between various parts of data, across the entire archive.
 
@@ -165,12 +157,6 @@ By comparing the relationships defined by your users and the taxonomy defined by
 It is from these deep links between data that the richer essence is maintained. And as it is derived from social rules it is more relevant for the majority of users. It is opinionated, but open to change, and driven by the group not the individual archivist.
 
 This additional layer provides one answer to the question “What should be keep?”. This layer suggests you keep everything, as one individual cannot say when any item will become relevant again. However the group can, and will, and this ontological layer will capture it.
-
-<new page/>
-
-The National Archives exist in part to promote best practice. To be the exemplars. To provide support. To show the way.
-
-Digital preservation is a fascinating, tough, complex, wonderful mess of a problem. We hope we have shown that we understand the challenges, that we have experience in trying to answer some of the questions, and more importantly that the potential to play our small part in the future of this most exciting projects is one that excites us to a point we can’t express in words.
 
 
 
