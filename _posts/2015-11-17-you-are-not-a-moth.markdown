@@ -1,4 +1,10 @@
-You are not a moth.
+---
+title:  "You are not a moth."
+date:   2015-11-17 16:29:00
+description: Technology Design
+---
+
+# You are not a moth.
 
 I feel it is time to discuss something that’s been on my mind for a while. I’m uncomfortable with your addiction to the lightbulb.
 
