@@ -1,10 +1,10 @@
 ---
-title:  "Digital archives, a vision."
+title:  "A vision for digital archives."
 date:   2015-11-17 16:29:00
 description: Technology Design
 ---
 
-# Digital archives, a vision.
+# A vision for digital archives.
 
 I was recently asked to write a vision piece on the future of archives, which is a fascinating, tough, complex, wonderful mess of a problem. And yes, Creative Directors are allowed to know about technology. We're not just good at colour and type. Some of us aren't at all good at colour and type. Anyway, this is the vision I came up with. It pissed off the archivists. I see this as a job well done.
 
